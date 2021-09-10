@@ -45,18 +45,36 @@
             </div>
             <!-- contatti e chat -->
             <div class="chats">
-                <div class="contact">
+                <div v-for="contact in contacts" class="contact">
                     <div class="contactAvatar">
-                        <img src="img/avatar_7.jpg" alt="contact avatar img">
+                        <img :src="getAvatarPhoto(contact)" alt="contact avatar img">
                     </div>
-                    <span id="contactName">Michele</span>
+                    <span id="contactName">{{contact.name}}</span>
                 </div>
             </div>
         </div>
         <!-- finestra di chat con il contatto -->
         <div class="chatting">
             <div id="listenerProfile">
-
+                <div id="user">
+                    <div class="profile">
+                        <div class="avatar">
+                            <img src="img/avatar_8.jpg" alt="user img">
+                        </div>
+                        <span>Paolo Dossetto</span>
+                    </div>
+                    <!-- funzioni varie -->
+                    <div class="functions">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="chattingInput">
+                <span id="emoticons"><i class="far fa-smile"></i></span>
+                <input id="chatInput" type="text" placeholder="Scrivi un messaggio">
+                <span id="audio"><i class="fas fa-microphone"></i></span>
             </div>
         </div>
     </div>

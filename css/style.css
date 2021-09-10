@@ -160,12 +160,43 @@ body {
 
 /* css finestra di chat con il contatto */
 .chatting {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
     width: 60%;
-    background-color: pink;
+    background-image: url('../img/mine.jpg');
 }
 
 #listenerProfile{
     height: 80px;
     width: 100%;
+}
+
+.chattingInput {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 7px;
+    background-color: rgb(243, 238, 234);
+}
+
+#emoticons, #audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 12%;
+    color: rgb(107, 115, 118);
+    cursor: pointer;
+    font-size: 30px;
+}
+
+#chatInput {
+    height: 100%;
+    width: 76%;
+    border: none;
+    margin-left: 3px;
+    padding-left: 10px;
 }

@@ -2,7 +2,8 @@ Vue.config.devtools = true;
 
 const app = new Vue ({
     el: '#root',
-    contacts: [
+    data: {
+        contacts: [
         {
             name: 'Michele',
             avatar: '_1',
@@ -69,7 +70,7 @@ const app = new Vue ({
         },
         {
             name: 'Luisa',
-            avatar: '_4',
+            avatar: '_io',
             visible: true,
             messages: [{
                 date: '10/01/2020 15:30:55',
@@ -83,5 +84,11 @@ const app = new Vue ({
                 }
             ],
         },
-    ]
+    ],
+    },
+    methods: {
+        getAvatarPhoto(contact) {
+            return 'img/avatar'+contact.avatar+'.jpg'
+        }
+    }
 })
