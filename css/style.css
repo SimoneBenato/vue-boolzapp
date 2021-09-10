@@ -18,14 +18,14 @@ body {
     width: 80%;
 }
 
+/* css colonna di navigazione laterale */
 .navigation {
     height: 100%;
     width: 40%;
     background-color: white;
-    border-right: 1px solid grey;
+    border-right: 1px solid rgb(214, 214, 214);
 }
 
-/* css colonna di navigazione laterale */
 #user {
     display: flex;
     justify-content: space-between;
@@ -131,6 +131,31 @@ body {
     border: none;
     margin-left: 3px;
     padding-left: 10px;
+}
+
+/* css lista chat */
+.contact {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.contactAvatar {
+    height: 80px;
+    width: 80px;
+    margin-right: 20px;
+}
+
+.contactAvatar img {
+    width: 100%;
+    border: transparent;
+    border-radius: 50%;
+}
+
+#contactName {
+    font-size: 20px;
 }
 
 /* css finestra di chat con il contatto */
