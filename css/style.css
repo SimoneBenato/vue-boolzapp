@@ -49,7 +49,7 @@ body {
 .avatar img {
     width: 100%;
     border: transparent;
-    border-radius: 30px;
+    border-radius: 50%;
 }
 
 .functions {
@@ -57,12 +57,52 @@ body {
     align-items: center;
 }
 
-.fas {
+.functions .fas {
     font-size: 25px;
     color: rgb(177, 177, 177);
-    margin-right: 15px;
+    margin-right: 20px;
+    cursor: pointer;
 }
 
+/* css notifiche */
+.notifications {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(142, 218, 252);
+    padding: 20px;
+}
+
+.white-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border: transparent;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.white-circle .fas {
+    color: rgb(142, 218, 252);
+    font-size: 25px;
+}
+
+.notificationsInstructions {
+    display: flex;
+    flex-direction: column;
+}
+
+.gray-link {
+    cursor: pointer;
+    color: gray;
+    font-size: 15px;
+    text-decoration: underline;
+    margin-top: 5px;
+}
 /* css finestra di chat con il contatto */
 .chatting {
     height: 100%;
