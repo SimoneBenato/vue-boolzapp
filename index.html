@@ -45,7 +45,7 @@
             </div>
             <!-- contatti e chat -->
             <div class="chats">
-                <div v-for="contact in contacts" class="contact">
+                <div v-for="contact in contacts" class="contact" @click=>
                     <div class="contactAvatar">
                         <img :src="getAvatarPhoto(contact)" alt="contact avatar img">
                     </div>
@@ -69,6 +69,12 @@
                         <i class="fas fa-paperclip"></i>
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
+                </div>
+            </div>
+            <div class="chatWindow">
+                <div v-for="(message, status) in messages">
+                    <div v-if="status == 'sent'" class="sent">{{messages.message}}</div>
+                    <div class="recived">Messaggio ricevuto</div>
                 </div>
             </div>
             <div class="chattingInput">
