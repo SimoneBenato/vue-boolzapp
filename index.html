@@ -45,7 +45,7 @@
             </div>
             <!-- contatti e chat -->
             <div class="chats">
-                <div v-for="contact in contacts" class="contact" @click=>
+                <div v-for="(contact, index) in contacts" class="contact" @click="activeChat(index)">
                     <div class="contactAvatar">
                         <img :src="getAvatarPhoto(contact)" alt="contact avatar img">
                     </div>
@@ -59,9 +59,9 @@
                 <div id="user">
                     <div class="profile">
                         <div class="avatar">
-                            <img src="img/avatar_8.jpg" alt="user img">
+                            <img :src="`img/avatar${contacts[userIndex].avatar}.jpg`" alt="user img">
                         </div>
-                        <span>Paolo Dossetto</span>
+                        <span>{{contacts[userIndex].name}}</span>
                     </div>
                     <!-- funzioni varie -->
                     <div class="functions">
@@ -72,9 +72,11 @@
                 </div>
             </div>
             <div class="chatWindow">
-                <div v-for="(message, status) in messages">
-                    <div v-if="status == 'sent'" class="sent">{{messages.message}}</div>
-                    <div class="recived">Messaggio ricevuto</div>
+                <div v-for="text in contacts[userIndex].messages">
+                    <div :class="text.status">
+                        {{text.message}} 
+                        {{text.date}}
+                    </div>
                 </div>
             </div>
             <div class="chattingInput">

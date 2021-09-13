@@ -84,11 +84,15 @@ const app = new Vue ({
                 }
             ],
         },
-    ],
+        ],
+        userIndex: 0,
     },
     methods: {
         getAvatarPhoto(contact) {
             return 'img/avatar'+contact.avatar+'.jpg'
+        },
+        activeChat(index) {
+            this.userIndex = index
         }
     }
 })
