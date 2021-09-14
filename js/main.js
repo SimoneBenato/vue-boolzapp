@@ -86,6 +86,7 @@ const app = new Vue ({
         },
         ],
         userIndex: 0,
+        newMessage: '',
     },
     methods: {
         getAvatarPhoto(contact) {
@@ -93,6 +94,30 @@ const app = new Vue ({
         },
         activeChat(index) {
             this.userIndex = index
-        }
+        },
+        addMessage() {
+            if(this.newMessage != "") {
+                let newMessage = this.newMessage;
+                let tmp = {
+                    date: dayjs().format('DD/MM/YYYY hh:mm:ss'),
+                    message: newMessage,
+                    status: 'sent',
+                };
+                this.contacts[this.userIndex].messages.push(tmp);
+                this.newMessage = "";
+                setTimeout(() => {
+                    let tmp = {
+                        date: dayjs().format('DD/MM/YYYY hh:mm:ss'),
+                        message: 'Ok',
+                        status: 'received',
+                    };
+                    this.contacts[this.userIndex].messages.push(tmp)
+                }, 3000);
+            } 
+        },
+        // addAnswer() {
+        //     setTimeout(function(){ alert("Hello"); }, 3000);
+        // }
     }
 })
+

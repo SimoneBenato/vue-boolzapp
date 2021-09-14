@@ -212,15 +212,25 @@ body {
 }
 
 .sent {
-    padding: 10px;
-    background-color: green;
+    float: right;
+    clear: both;
+    padding: 15px; 
+    background-color: #dcf8c6;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
 .received {
-    padding: 10px;
-    background-color: red;
+    float: left;
+    clear: both;
+    padding: 15px;
+    background-color: whitesmoke;
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+.chatData {
+    float: right;
+    font-size: 10px;
+    color: black;
 }
